@@ -66,6 +66,10 @@ public class TextEditorPanel1 extends JPanel implements TextEditorView {
 		this.text.setText(text);
 	}
 	
+	public String getText(){
+		return text.getText();
+	}
+	
 	public File selectFile(){
 		JFileChooser fileChooser = new JFileChooser();
 		fileChooser.showOpenDialog(this);
@@ -75,5 +79,9 @@ public class TextEditorPanel1 extends JPanel implements TextEditorView {
 	public void controller(ActionListener ctr) {
 		open.setActionCommand(OPEN);
 		open.addActionListener(ctr);
+		save.setActionCommand(SAVE);
+		save.addActionListener(ctr);
+		close.setActionCommand(CLOSE);
+		close.addActionListener(ctr);
 	}
 }
